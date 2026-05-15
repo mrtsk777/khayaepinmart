@@ -1,130 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products | KHA YAY PIN MART</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Products - Kha Yay Pin Mart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .products-hero { padding: 140px 20px 40px; text-align: center; background: var(--light-bg); }
-        .tab-container { display: flex; justify-content: center; gap: 12px; margin: 40px auto; max-width: 1000px; padding: 0 20px; flex-wrap: wrap; }
-        .tab-btn { padding: 10px 20px; border: none; background: var(--light-bg); color: var(--dark-color); border-radius: 20px; font-weight: 600; cursor: pointer; transition: 0.3s; }
-        .tab-btn.active, .tab-btn:hover { background: var(--primary-color); color: white; }
-        .products-wrapper { max-width: 1200px; margin: 0 auto 100px; padding: 0 20px; }
+        @import url('https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&display=swap');
+        body { font-family: 'Pyidaungsu', sans-serif; background-color: #f8fafc; }
+        .product-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Menu Bar -->
-    <nav>
-        <div class="logo">KHA YAY PIN MART</div>
-        <div class="menu-links">
-            <a href="index.html">Home</a>
-            <a href="products.html" class="active">Products</a>
-            <a href="contact.html">Contact</a>
+    <!-- Header / Navigation -->
+    <nav class="bg-green-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
+                <i class="fas fa-leaf"></i> Kha Yay Pin Mart
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-green-200">ပင်မစာမျက်နှာ</a>
+                <a href="products.html" class="text-yellow-300 font-bold">ကုန်ပစ္စည်းများ</a>
+                <a href="balloon.html" class="hover:text-green-200">Balloon ခန်းမ</a>
+                <a href="#" class="hover:text-green-200">ဆက်သွယ်ရန်</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <i class="fas fa-search cursor-pointer"></i>
+                <div class="relative">
+                    <i class="fas fa-shopping-cart cursor-pointer"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full px-1">0</span>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <header class="products-hero">
-        <h1>KHA YAY PIN MART Products</h1>
-        <p>အရည်အသွေးမြင့် ကုန်ပစ္စည်းများကို အမျိုးအစားအလိုက် စိတ်ကြိုက်ရွေးချယ်ဝယ်ယူနိုင်ပါသည်။</p>
+    <!-- Page Title -->
+    <header class="bg-white border-b py-8">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold text-gray-800 text-center mb-6">ကျွန်ုပ်တို့၏ ရောင်းကုန်ပစ္စည်းများ</h1>
+        </div>
     </header>
 
-    <!-- Category Tabs (ခလုတ်များ) -->
-    <div class="tab-container">
-        <button class="tab-btn active" onclick="filterProducts('all')">All Items</button>
-        <button class="tab-btn" onclick="filterProducts('groceries')">အစားအသောက်</button>
-        <button class="tab-btn" onclick="filterProducts('clothing')">အဝတ်အထည်</button>
-        <button class="tab-btn" onclick="filterProducts('household')">လူသုံးကုန်</button>
-        <button class="tab-btn" onclick="filterProducts('beverages')">အဖျော်ယမကာ</button>
-        <button class="tab-btn" onclick="filterProducts('shoes')">ဖိနပ်မျိုးစုံ</button>
-        <button class="tab-btn" onclick="filterProducts('electrical')">လျှပ်စစ်ဝါယာကြိုး</button>
-    </div>
-
-    <!-- Products Grid -->
-    <div class="products-wrapper">
-        <div class="products-grid">
+    <!-- Product Grid -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             
-            <!-- Product 1: Groceries -->
-            <div class="product-card" data-category="groceries">
-                <div class="img-placeholder" style="height: auto; background: none;">
-                    <img src="images/groceries.jpg" alt="Potato Chips" style="width: 100%; height: 220px; object-fit: cover;">
-                </div>
-                <div class="product-info">
-                    <h4>Groceries</h4>
-                    <h3>Premium Potato Chips</h3>
-                    <p class="price">1,500 MMK</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
+            <!-- JavaScript အသုံးပြု၍ ပစ္စည်း ၁၇ မျိုးသာ ထည့်သွင်းထားသည် (Balloon များ မပါဝင်ပါ) -->
+            <script>
+                const products = [
+                    { name: "ဘောလုံး", img: "ball", price: "15,000", cat: "Sports" },
+                    { name: "Coffee Premium", img: "coffee1", price: "5,500", cat: "Drink" },
+                    { name: "Coffee Mix", img: "coffee2", price: "4,800", cat: "Drink" },
+                    { name: "အအေးမျိုးစုံ", img: "drinks", price: "1,200", cat: "Drink" },
+                    { name: "Fast Food Set", img: "fast_foods", price: "8,500", cat: "Food" },
+                    { name: "နွားနို့", img: "milk", price: "3,500", cat: "Drink" },
+                    { name: "ရုံးသုံးပစ္စည်း", img: "office", price: "2,000", cat: "Office" },
+                    { name: "ရှပ်အင်္ကျီ", img: "shirt", price: "12,000", cat: "Fashion" },
+                    { name: "ဖိနပ် (Shoe)", img: "shoe", price: "25,000", cat: "Fashion" },
+                    { name: "အိမ်စီးဖိနပ်", img: "sliper", price: "3,500", cat: "Fashion" },
+                    { name: "တာယာ", img: "tayar", price: "45,000", cat: "Car" },
+                    { name: "လက်ဖက်ရည်", img: "tea", price: "2,500", cat: "Drink" },
+                    { name: "သွားတိုက်တံ နှင့် ဆေး", img: "toothpaste_brush", price: "1,500", cat: "Health" },
+                    { name: "လျှပ်စစ်ကြိုး Type 1", img: "wires1", price: "5,000", cat: "Electronics" },
+                    { name: "လျှပ်စစ်ကြိုး Type 2", img: "wires2", price: "6,000", cat: "Electronics" },
+                    { name: "လျှပ်စစ်ကြိုး Type 3", img: "wires3", price: "7,000", cat: "Electronics" },
+                    { name: "လျှပ်စစ်ကြိုး Type 4", img: "wires4", price: "8,000", cat: "Electronics" }
+                ];
 
-            <!-- Product 2: Clothing -->
-            <div class="product-card" data-category="clothing">
-                <div class="img-placeholder" style="height: auto; background: none;">
-                    <img src="images/clothing.jpg" alt="T-Shirt" style="width: 100%; height: 220px; object-fit: cover;">
-                </div>
-                <div class="product-info">
-                    <h4>Clothing</h4>
-                    <h3>Casual Cotton T-Shirt</h3>
-                    <p class="price">12,000 MMK</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
+                const container = document.querySelector('.grid');
 
-            <!-- Product 3: Shoes -->
-            <div class="product-card" data-category="shoes">
-                <div class="img-placeholder" style="height: auto; background: none;">
-                    <img src="images/shoes.jpg" alt="Running Shoes" style="width: 100%; height: 220px; object-fit: cover;">
-                </div>
-                <div class="product-info">
-                    <h4>Shoes</h4>
-                    <h3>Sport Running Shoes</h3>
-                    <p class="price">35,000 MMK</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Product 4: Electrical -->
-            <div class="product-card" data-category="electrical">
-                <div class="img-placeholder" style="height: auto; background: none;">
-                    <img src="images/electrical.jpg" alt="Electrical Cable" style="width: 100%; height: 220px; object-fit: cover;">
-                </div>
-                <div class="product-info">
-                    <h4>Electrical</h4>
-                    <h3>Copper Electrical Cable 100m</h3>
-                    <p class="price">45,000 MMK</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </div>
-
+                products.forEach(p => {
+                    container.innerHTML += `
+                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group">
+                            <div class="relative h-64 bg-gray-200 overflow-hidden">
+                                <img src="images/${p.img}.jpg" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded-md">${p.cat}</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-bold text-gray-800 mb-2">${p.name}</h3>
+                                <p class="text-green-600 font-bold mb-4">${p.price} MMK</p>
+                                <button class="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-green-600 transition flex items-center justify-center gap-2">
+                                    <i class="fas fa-cart-plus"></i> ခြင်းထဲထည့်မည်
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+            </script>
         </div>
-    </div>
+    </main>
 
-    <footer>
-        <p>© 2026 KHA YAY PIN MART. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-white mb-4">Kha Yay Pin Mart</h2>
+            <hr class="my-6 border-gray-700">
+            <p class="text-sm">&copy; 2026 Kha Yay Pin Mart. All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <!-- Tab Filtering JavaScript Script -->
-    <script>
-        function filterProducts(category) {
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            if(event) event.target.classList.add('active');
-
-            const cards = document.querySelectorAll('.product-card');
-            cards.forEach(card => {
-                if (category === 'all') {
-                    card.style.display = 'block';
-                } else {
-                    if (card.getAttribute('data-category') === category) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                }
-            });
-        }
-    </script>
 </body>
 </html>
