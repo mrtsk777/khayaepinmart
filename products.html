@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | KHA YAY PIN MART</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .products-hero { padding: 140px 20px 40px; text-align: center; background: var(--light-bg); }
+        .tab-container { display: flex; justify-content: center; gap: 12px; margin: 40px auto; max-width: 1000px; padding: 0 20px; flex-wrap: wrap; }
+        .tab-btn { padding: 10px 20px; border: none; background: var(--light-bg); color: var(--dark-color); border-radius: 20px; font-weight: 600; cursor: pointer; transition: 0.3s; }
+        .tab-btn.active, .tab-btn:hover { background: var(--primary-color); color: white; }
+        .products-wrapper { max-width: 1200px; margin: 0 auto 100px; padding: 0 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu Bar -->
+    <nav>
+        <div class="logo">KHA YAY PIN MART</div>
+        <div class="menu-links">
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="products-hero">
+        <h1>KHA YAY PIN MART Products</h1>
+        <p>အရည်အသွေးမြင့် ကုန်ပစ္စည်းများကို အမျိုးအစားအလိုက် စိတ်ကြိုက်ရွေးချယ်ဝယ်ယူနိုင်ပါသည်။</p>
+    </header>
+
+    <!-- Category Tabs (ခလုတ်များ) -->
+    <div class="tab-container">
+        <button class="tab-btn active" onclick="filterProducts('all')">All Items</button>
+        <button class="tab-btn" onclick="filterProducts('groceries')">အစားအသောက်</button>
+        <button class="tab-btn" onclick="filterProducts('clothing')">အဝတ်အထည်</button>
+        <button class="tab-btn" onclick="filterProducts('household')">လူသုံးကုန်</button>
+        <button class="tab-btn" onclick="filterProducts('beverages')">အဖျော်ယမကာ</button>
+        <button class="tab-btn" onclick="filterProducts('shoes')">ဖိနပ်မျိုးစုံ</button>
+        <button class="tab-btn" onclick="filterProducts('electrical')">လျှပ်စစ်ဝါယာကြိုး</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-wrapper">
+        <div class="products-grid">
+            
+            <!-- Product 1: Groceries -->
+            <div class="product-card" data-category="groceries">
+                <div class="img-placeholder" style="height: auto; background: none;">
+                    <img src="images/groceries.jpg" alt="Potato Chips" style="width: 100%; height: 220px; object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h4>Groceries</h4>
+                    <h3>Premium Potato Chips</h3>
+                    <p class="price">1,500 MMK</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2: Clothing -->
+            <div class="product-card" data-category="clothing">
+                <div class="img-placeholder" style="height: auto; background: none;">
+                    <img src="images/clothing.jpg" alt="T-Shirt" style="width: 100%; height: 220px; object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h4>Clothing</h4>
+                    <h3>Casual Cotton T-Shirt</h3>
+                    <p class="price">12,000 MMK</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3: Shoes -->
+            <div class="product-card" data-category="shoes">
+                <div class="img-placeholder" style="height: auto; background: none;">
+                    <img src="images/shoes.jpg" alt="Running Shoes" style="width: 100%; height: 220px; object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h4>Shoes</h4>
+                    <h3>Sport Running Shoes</h3>
+                    <p class="price">35,000 MMK</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4: Electrical -->
+            <div class="product-card" data-category="electrical">
+                <div class="img-placeholder" style="height: auto; background: none;">
+                    <img src="images/electrical.jpg" alt="Electrical Cable" style="width: 100%; height: 220px; object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h4>Electrical</h4>
+                    <h3>Copper Electrical Cable 100m</h3>
+                    <p class="price">45,000 MMK</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 KHA YAY PIN MART. All rights reserved.</p>
+    </footer>
+
+    <!-- Tab Filtering JavaScript Script -->
+    <script>
+        function filterProducts(category) {
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if(event) event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
