@@ -5,119 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Kha Yae Pin Mart</title>
     
+    <!-- စုစည်းပြီးသား style.css ဖြင့် တိုက်ရိုက်ချိတ်ဆက်ခြင်း -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- မျက်စိပသာဒဖြစ်စေမည့် အဆင့်မြင့် Menu block တုံး စတိုင်လ်များ -->
-    <style>
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
-            background: #ffffff;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-brand {
-            font-size: 22px;
-            font-weight: 800;
-            color: #0f172a;
-            text-decoration: none;
-        }
-        .nav-brand span { 
-            color: #d97706; /* ရွှေဝါရောင် */
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .nav-item {
-            text-decoration: none;
-            color: #475569;
-            font-size: 14px;
-            font-weight: 700;
-            padding: 10px 20px;
-            border-radius: 8px; /* ထောင့်ဝိုင်း Block တုံး */
-            transition: all 0.3s ease;
-            background: #f8fafc; /* မရွေးထားရင် အောက်ခံကာလာနုနု */
-            border: 1px solid #e2e8f0;
-            display: inline-block;
-        }
-
-        /* မရွေးထားတဲ့ Menu တွေကို Mouse တင်ရင် ပြောင်းမည့်ပုံစံ */
-        .nav-item:hover {
-            color: #ffffff;
-            background: #f59e0b;
-            border-color: #f59e0b;
-            transform: translateY(-2px);
-        }
-
-        /* ⭐️ ရွေးချယ်ထားတဲ့ ဆက်သွယ်ရန် Menu ကိုပဲ ကာလာ Highlight ထင်ထင်ရှားရှား ပြထားခြင်း */
-        .nav-item.active {
-            color: #ffffff;
-            background: #d97706; /* ရွှေအိုရောင်ရင့် */
-            border-color: #d97706;
-            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            color: #0f172a;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: #ffffff;
-                padding: 20px;
-                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-                gap: 10px;
-                box-sizing: border-box;
-            }
-
-            .nav-links.show {
-                display: flex;
-            }
-
-            .nav-item {
-                width: 100%;
-                text-align: center;
-                padding: 14px;
-            }
-        }
-    </style>
 </head>
 <body>
 
     <!-- ၁။ နဖူးစည်း Header Menu -->
     <nav class="navbar">
         <a href="index.html" class="nav-brand">
-            <i class="fas fa-shopping-bag" style="color: #d97706;"></i> Kha Yae Pin <span>Mart</span>
+            <i class="fas fa-shopping-bag"></i> Kha Yae Pin <span>Mart</span>
         </a>
         
+        <!-- ဖုန်းမျက်နှာပြင်အတွက် ၃ ကြောင်း Menu Toggle -->
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
 
-        <!-- ဆက်သွယ်ရန် (Contact) စာမျက်နှာ ဖြစ်၍ ၎င်းနေရာတွင်သာ active ပြထားပါသည် -->
+        <!-- ဆက်သွယ်ရန် (Contact) စာမျက်နှာဖြစ်၍ ၎င်းနေရာတွင်သာ active ပြထားပါသည် -->
         <div class="nav-links" id="nav-menu">
             <a href="index.html" class="nav-item">ပင်မစာမျက်နှာ</a>
             <a href="products.html" class="nav-item">ကုန်ပစ္စည်းများ</a>
@@ -127,19 +33,86 @@
         </div>
     </nav>
 
-    <!-- လူကြီးမင်း၏ မူလ Contact Page အတွင်းပိုင်းအလှအပများ ဆက်လက်တည်ရှိမည့်နေရာ -->
+    <!-- Main Content Container -->
     <main class="main-container">
-        
-        <!-- (လူကြီးမင်း ရေးသားထားဖူးသော လိပ်စာ၊ ဖုန်းနံပါတ်၊ မြေပုံ နှင့် Form စာသားများ ဤနေရာတွင် ပုံမှန်အတိုင်း ပေါ်နေပါလိမ့်မည်) -->
+
+        <!-- ၂။ Contact Us Title Intro -->
+        <div style="text-align: center; margin-bottom: 50px; margin-top: 20px;">
+            <h1 style="font-size: 34px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px;">Contact Us</h1>
+            <p style="color: #64748b; font-size: 14px; margin-top: 10px;">ကျွန်ုပ်တို့ထံသို့ လွယ်ကူလျင်မြန်စွာ ဆက်သွယ်မေးမြန်းနိုင်ပါသည်။</p>
+            <div style="width: 60px; height: 4px; background: #d97706; margin: 20px auto; border-radius: 2px;"></div>
+        </div>
+
+        <!-- ၃။ အဆင့်မြင့် Two-Column Layout (လိပ်စာ နှင့် Message ပုံး) -->
+        <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+            
+            <!-- ဘယ်ဘက်ခြမ်း - ဆက်သွယ်ရန် လိပ်စာနှင့် အချက်အလက်များ -->
+            <div style="display: flex; flex-direction: column; gap: 25px;">
+                <div style="background: #ffffff; padding: 30px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.01);">
+                    <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-map-marked-alt" style="color: #d97706;"></i> ဆိုင်လိပ်စာ
+                    </h3>
+                    <p style="color: #475569; font-size: 14px; line-height: 1.8;">
+                        ခရေပင်လမ်းမကြီး၊ (မတ်စတပ်အနီး)၊<br>
+                        မင်္ဂလာဒုံမြို့နယ်၊ ရန်ကုန်မြို့။
+                    </p>
+                </div>
+
+                <div style="background: #ffffff; padding: 30px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.01);">
+                    <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-phone-alt" style="color: #d97706;"></i> ဖုန်းနှင့် အီးမေးလ်
+                    </h3>
+                    <p style="color: #475569; font-size: 14px; line-height: 2;">
+                        <strong style="color: #1e293b;">ဖုန်း -</strong> 09-123456789, 09-987654321<br>
+                        <strong style="color: #1e293b;">အီးမေးလ် -</strong> info@khayaepinmart.com
+                    </p>
+                </div>
+
+                <div style="background: #ffffff; padding: 30px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.01);">
+                    <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-clock" style="color: #d97706;"></i> ဆိုင်ဖွင့်ချိန်
+                    </h3>
+                    <p style="color: #475569; font-size: 14px;">နေ့စဉ် နေ့တိုင်း : 9:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+
+            <!-- ညာဘက်ခြမ်း - စာတိုပေးပို့ရန် Form ပုံး -->
+            <div style="background: #ffffff; padding: 40px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.02);">
+                <h3 style="font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">ဆက်သွယ်ရန် မက်ဆေ့ခ်ျပေးပို့ပါ</h3>
+                <p style="color: #64748b; font-size: 13px; margin-bottom: 25px;">လူကြီးမင်းတို့ သိရှိလိုသည်များကို အောက်ပါ Form တွင် ဖြည့်စွက်မေးမြန်းနိုင်ပါသည်။</p>
+                
+                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div>
+                        <label style="display: block; font-size: 13px; font-weight: 700; color: #475569; margin-bottom: 8px;">လူကြီးမင်းအမည်</label>
+                        <input type="text" placeholder="အမည် ဖြည့်စွက်ပါ" required style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1px solid #cbd5e1; font-size: 14px; outline: none; background: #f8fafc; transition: all 0.3s;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-size: 13px; font-weight: 700; color: #475569; margin-bottom: 8px;">ဖုန်းနံပါတ် သို့မဟုတ် အီးမေးလ်</label>
+                        <input type="text" placeholder="ဆက်သွယ်ရမည့် အချက်အလက်" required style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1px solid #cbd5e1; font-size: 14px; outline: none; background: #f8fafc; transition: all 0.3s;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-size: 13px; font-weight: 700; color: #475569; margin-bottom: 8px;">မေးမြန်းလိုသည့် အကြောင်းအရာ</label>
+                        <textarea rows="4" placeholder="ဤနေရာတွင် စာရေးသားနိုင်ပါသည်..." required style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1px solid #cbd5e1; font-size: 14px; outline: none; background: #f8fafc; resize: none; font-family: inherit; transition: all 0.3s;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%; border: none; padding: 14px; cursor: pointer; font-size: 14px; background-color: #d97706; text-align: center;">
+                        <i class="fas fa-paper-plane" style="margin-right: 5px;"></i> ပေးပို့ရန်
+                    </button>
+                </form>
+            </div>
+
+        </div>
 
     </main>
 
-    <!-- ၅။ Footer -->
+    <!-- ၄။ အောက်ခြေ Footer -->
     <footer class="footer">
         <p>&copy; 2026 Kha Yae Pin Mart. All Rights Reserved.</p>
     </footer>
 
-    <!-- ဖုန်း Menu စနစ် Javascript -->
+    <!-- ဖုန်း Menu စနစ် ဖွင့်/ပိတ် စာညှပ် (JavaScript) -->
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
         const navMenu = document.getElementById('nav-menu');
