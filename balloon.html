@@ -3,150 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kha Yay Pin Balloon Hall - အခမ်းအနားခန်းမ</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Kha Yae Pin Balloon Hall - Premium Event Space</title>
+    
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&display=swap');
-        body { font-family: 'Pyidaungsu', sans-serif; background-color: #fafafa; }
-        .gallery-img:hover { transform: scale(1.03); transition: all 0.4s ease; }
+        /* Navbar ပတ်ဝန်းကျင်တစ်ခုလုံး အလှဆင်ခြင်း */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0f172a;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+        .nav-brand span { 
+            color: #d97706; /* ခေတ်မီ ရွှေဝါရောင် */
+        }
+
+        /* Menu များကို Block တုံးပုံစံ ဖန်တီးခြင်း */
+        .nav-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #475569;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 8px; /* ထောင့်ဝိုင်း Block တုံးပုံစံ */
+            transition: all 0.3s ease;
+            background: #f8fafc; /* ပုံမှန်အောက်ခံ ကာလာနု */
+            border: 1px solid #e2e8f0;
+            display: inline-block;
+        }
+
+        /* Mouse တင်လိုက်လျှင် ကာလာပြောင်းလဲမှု (Hover Effect) */
+        .nav-item:hover {
+            color: #ffffff;
+            background: #f59e0b; /* ရွှေဝါရောင်တောက်တောက် */
+            border-color: #f59e0b;
+            transform: translateY(-2px); /* အပေါ်သို့ အိအိလေး ကြွတက်မည့်အကျိုးသက်ရောက်မှု */
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+        }
+
+        /* လက်ရှိရောက်နေသော စာမျက်နှာကို Block တုံးအပြည့် ပြထားခြင်း */
+        .nav-item.active {
+            color: #ffffff;
+            background: #d97706; /* ရွှေအိုရောင်ရင့် */
+            border-color: #d97706;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+
+        /* ဖုန်းအတွက် Menu ဖွင့်ခလုတ် */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: #0f172a;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        /* 📱 ဖုန်းမျက်နှာပြင် Responsive ညှိခြင်း */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                gap: 10px;
+                box-sizing: border-box;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-item {
+                width: 100%;
+                text-align: center;
+                padding: 14px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- ၁။ နဖူးစည်း Header Menu (အသစ်) -->
     <nav class="navbar">
         <a href="index.html" class="nav-brand">
-            <i class="fas fa-shopping-bag"></i> Kha Yae Pin <span>Mart</span>
+            <i class="fas fa-shopping-bag" style="color: #d97706;"></i> Kha Yae Pin <span>Mart</span>
         </a>
         
-        <!-- ဖုန်းမှာ ပေါ်မယ့် ၃ ကြောင်း အတုံးလေး -->
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
 
         <div class="nav-links" id="nav-menu">
-            <a href="index.html" class="nav-item active">ပင်မစာမျက်နှာ</a>
+            <a href="index.html" class="nav-item">ပင်မစာမျက်နှာ</a>
             <a href="products.html" class="nav-item">ကုန်ပစ္စည်းများ</a>
             <a href="services.html" class="nav-item">ဝန်ဆောင်မှုများ</a>
-            <a href="balloon.html" class="nav-item">Balloon ခန်းမ</a>
+            <a href="balloon.html" class="nav-item active">Balloon ခန်းမ</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="relative bg-amber-950 text-white py-24 px-4 text-center overflow-hidden">
-        <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('images/kypballoon1.jpg');"></div>
-        <div class="relative z-10 max-w-3xl mx-auto">
-            <span class="text-amber-400 uppercase tracking-widest font-bold text-sm bg-amber-900/50 px-4 py-1.5 rounded-full border border-amber-700">Kha Yae Pin Mart (3rd Floor)</span>
-            <h1 class="text-4xl md:text-5xl font-bold mt-6 mb-4 text-amber-100 leading-snug">လူဦးရေ ၂၀၀ ဆံ့ ခန့်ညားထည်ဝါသော <br><span class="text-amber-400">Kha Yae Pin Balloon Hall</span></h1>
-            <p class="text-amber-200/80 text-base mb-8 max-w-2xl mx-auto">မင်္ဂလာဧည့်ခံပွဲများ၊ မွေးနေ့ပွဲများ၊ ကုမ္ပဏီ Meeting များနှင့် အလှူမင်္ဂလာပွဲများကို အကောင်းဆုံးဝန်ဆောင်မှု၊ ခေတ်မီအသံစနစ်များဖြင့် ခန့်ခန့်ထည်ထည် ကျင်းပနိုင်ပါသည်။</p>
-            <div class="flex flex-wrap justify-center gap-6 text-sm text-amber-300">
-                <div class="flex items-center gap-2 bg-amber-900/40 px-4 py-2 rounded-lg border border-amber-800"><i class="fas fa-users text-amber-400"></i> လူဦးရေ ၂၀၀ ဆံ့</div>
-                <div class="flex items-center gap-2 bg-amber-900/40 px-4 py-2 rounded-lg border border-amber-800"><i class="fas fa-snowflake text-amber-400"></i> Fully Air-Conditioned</div>
-                <div class="flex items-center gap-2 bg-amber-900/40 px-4 py-2 rounded-lg border border-amber-800"><i class="fas fa-volume-up text-amber-400"></i> Premium Sound System</div>
-            </div>
-        </div>
-    </header>
+    <main class="main-container">
 
-    <!-- Gallery Section -->
-    <section class="container mx-auto px-4 py-16">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-amber-950 mb-2">ခန်းမအလှအပနှင့် ပြင်ဆင်မှုများ</h2>
-            <div class="w-24 h-1 bg-amber-500 mx-auto rounded-full"></div>
+        <div style="text-align: center; margin-bottom: 50px; margin-top: 20px;">
+            <h1 style="font-size: 34px; font-weight: 800; color: #0f172a; letter-spacing: -0.5px;">Kha Yae Pin Balloon Hall</h1>
+            <p style="color: #64748b; font-size: 14px; margin-top: 10px;">မင်္ဂလာဧည့်ခံပွဲများ၊ မွေးနေ့ပွဲများနှင့် အခမ်းအနားမျိုးစုံအတွက် အဆင့်မြင့် ပွဲခံခန်းမ ဝန်ဆောင်မှု။</p>
+            <div style="width: 60px; height: 4px; background: #d97706; margin: 20px auto; border-radius: 2px;"></div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <div class="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden shadow-lg group bg-amber-100">
-                <img src="images/kypballoon1.jpg" alt="KYP Balloon Hall 1" class="w-full h-full object-cover gallery-img min-h-[400px]">
-            </div>
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon2.jpg" alt="KYP Balloon 2" class="w-full h-full object-cover gallery-img"></div>
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon3.jpg" alt="KYP Balloon 3" class="w-full h-full object-cover gallery-img"></div>
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon4.jpg" alt="KYP Balloon 4" class="w-full h-full object-cover gallery-img"></div>
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon5.jpg" alt="KYP Balloon 5" class="w-full h-full object-cover gallery-img"></div>
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon6.jpg" alt="KYP Balloon 6" class="w-full h-full object-cover gallery-img"></div>
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon7.jpg" alt="KYP Balloon 7" class="w-full h-full object-cover gallery-img"></div>
-        </div>
-    </section>
-
-    <!-- Location & Booking Section -->
-    <section id="booking-section" class="bg-amber-950 text-white py-16">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-                <!-- Contact Info Inside Hall Page -->
-                <div class="lg:col-span-5 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-2xl font-bold text-amber-400 mb-6">ခန်းမတည်နေရာနှင့် ဆက်သွယ်ရန်</h3>
-                        <div class="space-y-6 text-amber-100">
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-map-marker-alt text-amber-400 mt-1"></i>
-                                <p class="text-sm leading-relaxed">တပ်မတော်ဆေးတက္ကသိုလ်ရှေ့၊ ရန်ကုန်-ပြည်လမ်းမကြီးကပ်လျက်၊ ခရေပင်လမ်းဆုံအနီး၊ ခရေပင်ကုန်တိုက် တတိယအထပ်။</p>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-phone-alt text-amber-400 mt-1"></i>
-                                <div class="flex flex-col text-sm">
-                                    <a href="tel:+959698357272" class="hover:underline">+95 9 698357272</a>
-                                    <a href="tel:+959451200420" class="hover:underline">+95 9 451200420</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-8">
-                        <a href="https://maps.app.goo.gl/i4Ktt66XZ4kkgH6m8" target="_blank" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-amber-950 font-bold py-3 px-6 rounded-xl transition shadow-md w-full justify-center">
-                            <i class="fas fa-map-marked-alt"></i> Google Maps ဖြင့်ကြည့်ရန်
-                        </a>
-                    </div>
+        <div class="grid-3">
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/kypballoon1.jpg" alt="Classic Wedding Setup"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">မင်္ဂလာပွဲ အပြင်အဆင်</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">Classic Wedding Setup</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">နူးညံ့ဆန်းသစ်သော ပန်းအလှဆင်မှုနှင့် မင်္ဂလာစင်မြင့် ဒီဇိုင်း။</p>
                 </div>
+            </div>
 
-                <!-- Booking Form -->
-                <div class="lg:col-span-7 bg-white text-gray-800 p-8 rounded-2xl shadow-2xl">
-                    <h4 class="text-xl font-bold text-amber-950 mb-4 text-center">ခန်းမကြိုတင်စုံစမ်းရန်ပုံစံ</h4>
-                    <form class="space-y-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">နာမည်</label>
-                                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">ဖုန်းနံပါတ်</label>
-                                <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">ကျင်းပမည့်ရက်စွဲ</label>
-                            <input type="date" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
-                        </div>
-                        <button type="button" class="w-full bg-amber-800 hover:bg-amber-900 text-white font-bold py-3 rounded-lg transition shadow-md">
-                            အသေးစိတ်ဆက်သွယ်ရန် တောင်းဆိုမည်
-                        </button>
-                    </form>
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/kypballoon2.jpg" alt="Luxury Dinner Backdrop"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">ဂုဏ်ပြုညစာစားပွဲ</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">Luxury Dinner Backdrop</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">အလင်းအမှောင်စနစ် ကောင်းမွန်ပြီး ခန့်ညားထည်ဝါသော နောက်ခံဒီဇိုင်း။</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/kypballoon3.jpg" alt="Birthday Party Balloon Arch"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">ပါတီပွဲ အပြင်အဆင်</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">Birthday Party Balloon Arch</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">ကလေး၊ လူကြီး မွေးနေ့ပွဲများအတွက် ပျော်ရွှင်စရာ ပူဖောင်းမုခ်ဦးများ။</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/kypballoon4.jpg" alt="Corporate Seminar Stage"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">အစည်းအဝေး / ဆွေးနွေးပွဲ</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">Corporate Seminar Stage</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">ကုမ္ပဏီ ဆွေးနွေးပွဲများနှင့် သင်တန်းများအတွက် သပ်ရပ်သော စင်မြင့်။</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/kypballoon5.jpg" alt="Grand Opening Theme"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">ဖွင့်ပွဲ အခမ်းအနား</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">Grand Opening Theme</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">ဆိုင်ဖွင့်ပွဲနှင့် အထိမ်းအမှတ် ကုမ္ပဏီနှစ်ပတ်လည်ပွဲ အပြင်အဆင်။</p>
+                </div>
+            </div>
+
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/kypballoon6.jpg" alt="VIP Lounge Decoration"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">အထူးနားနေဆောင်</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">VIP Lounge Decoration</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">အရေးကြီး ဧည့်သည်တော်များ စိတ်အေးချမ်းသာ နားနေနိုင်မည့် နေရာ။</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#1c0d02] text-amber-700 py-8 text-center border-t border-amber-900">
-        <p class="text-sm">&copy; 2026 Kha Yae Pin Balloon Hall. All Rights Reserved.</p>
+        <section style="background: #ffffff; padding: 35px; border-radius: 20px; border: 1px solid #e2e8f0; margin-top: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+            <h2 style="font-size: 22px; font-weight: 700; color: #0f172a; margin-bottom: 15px;"><i class="fas fa-info-circle" style="color: #d97706;"></i> ခန်းမ အချက်အလက်များနှင့် ပါဝင်သော ဝန်ဆောင်မှုများ</h2>
+            <ul style="list-style: none; padding: 0; color: #475569; font-size: 14px; line-height: 2.2;">
+                <li><i class="fas fa-check-circle" style="color: #d97706; margin-right: 8px;"></i> လူဦးရေ (၁၅၀) မှ (၂၀၀) အထိ ကျယ်ကျယ်ဝန်းဝန်း ဆန့်ခြင်း။</li>
+                <li><i class="fas fa-check-circle" style="color: #d97706; margin-right: 8px;"></i> အဆင့်မြင့် Central Air Conditioning (လေအေးပေးစနစ်) ပါဝင်ခြင်း။</li>
+                <li><i class="fas fa-check-circle" style="color: #d97706; margin-right: 8px;"></i> ပွဲသုံး Sound System (အသံစနစ်) နှင့် မီးဆိုင်းစနစ်များ အခမဲ့ ပံ့ပိုးပေးခြင်း။</li>
+                <li><i class="fas fa-check-circle" style="color: #d97706; margin-right: 8px;"></i> ကျယ်ဝန်းသော ကားပါကင် (Car Parking) နေရာ ပါရှိခြင်း။</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Kha Yae Pin Mart. All Rights Reserved.</p>
     </footer>
-    <!-- ဖုန်း Menu ပွင့်/ပိတ် လုပ်ပေးမည့် Script လေး ဖြစ်ပါတယ် -->
+
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
         const navMenu = document.getElementById('nav-menu');
 
         mobileMenu.addEventListener('click', () => {
             navMenu.classList.toggle('show');
-            
-            // Icon လေးကို ၃ ကြောင်းပုံကနေ မြှားပုံ (သို့) ကြက်ခြေခတ်ပုံ ပြောင်းချင်ရင်လဲ ရပါတယ်
             const icon = mobileMenu.querySelector('i');
             if (navMenu.classList.contains('show')) {
                 icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times'); // ကြက်ခြေခတ်ပြောင်းမယ်
+                icon.classList.add('fa-times');
             } else {
                 icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars'); // ၃ ကြောင်းပုံပြန်ပြမယ်
+                icon.classList.add('fa-bars');
             }
         });
     </script>
-    
+
 </body>
 </html>
