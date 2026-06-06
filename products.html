@@ -7,18 +7,16 @@
     
     <!-- စုစည်းပြီးသား style.css ဖြင့် တိုက်ရိုက်ချိတ်ဆက်ခြင်း -->
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- ၁။ နဖူးစည်း Header Menu -->
+    <!-- ၁။ နဖူးစည်း Header Menu (Android & Samsung အားလုံးအတွက် စိတ်ချရသောစနစ်) -->
     <nav class="navbar">
         <a href="index.html" class="nav-brand">
-            <i class="fas fa-shopping-bag"></i> Kha Yae Pin <span>Mart</span>
+            Kha Yae Pin <span>Mart</span>
         </a>
         
-        <!-- ဖုန်းမျက်နှာပြင်အတွက် ၃ ကြောင်း Menu Toggle -->
+        <!-- ဖုန်းမျက်နှာပြင်အတွက် Standard HTML ၃ ကြောင်း Menu Toggle -->
         <div class="menu-toggle" id="mobile-menu" style="color: #d97706 !important; font-weight: bold;">
             <span style="font-size: 26px; line-height: 1;">&#9776;</span>
         </div>
@@ -43,12 +41,12 @@
             <p style="color: #64748b; font-size: 14px; max-width: 600px; margin: 0 auto; line-height: 1.6;">အရည်အသွေးမြင့် ကုန်ပစ္စည်းစုံလင်စွာကို စျေးနှုန်းချိုသာစွာဖြင့် တစ်နေရာတည်းမှာ စိတ်ချမ်းမြေ့စွာ ဝယ်ယူရရှိနိုင်ပါသည်။</p>
         </div>
 
-        <!-- ကုန်ပစ္စည်းများ ပြသမည့် Grid စနစ် -->
+        <!-- ကုန်ပစ္စည်းများ ပြသမည့် Grid စနစ် (loading="lazy" အပြည့်အစုံဖြင့်) -->
         <div class="grid-3">
             
             <!-- Product 1 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/fast_foods.jpg" alt="Fast Foods"></div>
+                <div class="card-img-box"><img src="images/fast_foods.jpg" alt="Fast Foods" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">အသင့်စား Fast Food မျိုးစုံ</h4>
@@ -59,7 +57,7 @@
 
             <!-- Product 2 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/coffee1.jpg" alt="Coffee 1"></div>
+                <div class="card-img-box"><img src="images/coffee1.jpg" alt="Coffee 1" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Premium Coffee Mix (အထုပ်ကြီး)</h4>
@@ -70,7 +68,7 @@
 
             <!-- Product 3 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/coffee2.jpg" alt="Coffee 2"></div>
+                <div class="card-img-box"><img src="images/coffee2.jpg" alt="Coffee 2" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Roasted Coffee Beans</h4>
@@ -81,7 +79,7 @@
 
             <!-- Product 4 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/drinks.jpg" alt="Drinks"></div>
+                <div class="card-img-box"><img src="images/drinks.jpg" alt="Drinks" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">လတ်ဆတ်သော အချိုရည်မျိုးစုံ</h4>
@@ -92,7 +90,7 @@
 
             <!-- Product 5 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/milk.jpg" alt="Milk"></div>
+                <div class="card-img-box"><img src="images/milk.jpg" alt="Milk" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">အာဟာရပြည့် နွားနို့စစ်စစ်</h4>
@@ -103,7 +101,7 @@
 
             <!-- Product 6 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/tea.jpg" alt="Tea"></div>
+                <div class="card-img-box"><img src="images/tea.jpg" alt="Tea" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Traditional Tea Mix</h4>
@@ -114,7 +112,7 @@
 
             <!-- Product 7 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/shirt.jpg" alt="Shirt"></div>
+                <div class="card-img-box"><img src="images/shirt.jpg" alt="Shirt" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">အဝတ်အထည်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">ခေတ်မီ စတိုင်လ်ရှပ်အင်္ကျီများ</h4>
@@ -125,7 +123,7 @@
 
             <!-- Product 8 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/shoe.jpg" alt="Shoe"></div>
+                <div class="card-img-box"><img src="images/shoe.jpg" alt="Shoe" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">ဖိနပ်မျိုးစုံ</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Premium Sneakers / ရှူးဖိနပ်များ</h4>
@@ -136,7 +134,7 @@
 
             <!-- Product 9 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/sliper.jpg" alt="Slipper"></div>
+                <div class="card-img-box"><img src="images/sliper.jpg" alt="Slipper" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">ဖိနပ်မျိုးစုံ</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">အိမ်သုံး သက်တောင့်သက်သာ ညှပ်ဖိနပ်များ</h4>
@@ -147,7 +145,7 @@
 
             <!-- Product 10 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/toothpaste_brush.jpg" alt="Toothpaste Brush"></div>
+                <div class="card-img-box"><img src="images/toothpaste_brush.jpg" alt="Toothpaste Brush" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">လူသုံးကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">သွားတိုက်ဆေးနှင့် သွားတိုက်တံစုံ</h4>
@@ -158,7 +156,7 @@
 
             <!-- Product 11 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/ball.jpg" alt="Ball"></div>
+                <div class="card-img-box"><img src="images/ball.jpg" alt="Ball" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">အားကစားပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">စံချိန်မီ ဘောလုံးနှင့် အားကစားပစ္စည်းများ</h4>
@@ -169,7 +167,7 @@
 
             <!-- Product 12 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/tayar.jpg" alt="Tayar"></div>
+                <div class="card-img-box"><img src="images/tayar.jpg" alt="Tayar" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">မော်တော်ယာဉ်အပိုပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">အဆင့်မြင့် မော်တော်ယာဉ် တာယာများ</h4>
@@ -180,7 +178,7 @@
 
             <!-- Product 13 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/wires1.jpg" alt="Wires 1"></div>
+                <div class="card-img-box"><img src="images/wires1.jpg" alt="Wires 1" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Copper Electrical Wires (Type 1)</h4>
@@ -191,7 +189,7 @@
 
             <!-- Product 14 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/wires2.jpg" alt="Wires 2"></div>
+                <div class="card-img-box"><img src="images/wires2.jpg" alt="Wires 2" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Heavy Duty Power Cables (Type 2)</h4>
@@ -202,7 +200,7 @@
 
             <!-- Product 15 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/wires3.jpg" alt="Wires 3"></div>
+                <div class="card-img-box"><img src="images/wires3.jpg" alt="Wires 3" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Flexible Multi-Core Wires (Type 3)</h4>
@@ -213,7 +211,7 @@
 
             <!-- Product 16 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/wires4.jpg" alt="Wires 4"></div>
+                <div class="card-img-box"><img src="images/wires4.jpg" alt="Wires 4" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Insulated Industrial Wires (Type 4)</h4>
@@ -224,7 +222,7 @@
 
             <!-- Product 17 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/kypballoon1.jpg" alt="Balloon 1"></div>
+                <div class="card-img-box"><img src="images/kypballoon1.jpg" alt="Balloon 1" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">Balloon Hall Design</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Classic Wedding Setup</h4>
@@ -235,7 +233,7 @@
 
             <!-- Product 18 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/kypballoon2.jpg" alt="Balloon 2"></div>
+                <div class="card-img-box"><img src="images/kypballoon2.jpg" alt="Balloon 2" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">Balloon Hall Design</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Luxury Dinner Backdrop</h4>
@@ -246,7 +244,7 @@
 
             <!-- Product 19 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/kypballoon3.jpg" alt="Balloon 3"></div>
+                <div class="card-img-box"><img src="images/kypballoon3.jpg" alt="Balloon 3" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">Balloon Hall Design</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Birthday Party Balloon Arch</h4>
@@ -257,7 +255,7 @@
 
             <!-- Product 20 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/kypballoon4.jpg" alt="Balloon 4"></div>
+                <div class="card-img-box"><img src="images/kypballoon4.jpg" alt="Balloon 4" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">Balloon Hall Design</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Corporate Seminar Stage</h4>
@@ -268,7 +266,7 @@
 
             <!-- Product 21 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/kypballoon5.jpg" alt="Balloon 5"></div>
+                <div class="card-img-box"><img src="images/kypballoon5.jpg" alt="Balloon 5" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">Balloon Hall Design</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Grand Opening Theme</h4>
@@ -279,7 +277,7 @@
 
             <!-- Product 22 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/kypballoon6.jpg" alt="Balloon 6"></div>
+                <div class="card-img-box"><img src="images/kypballoon6.jpg" alt="Balloon 6" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">Balloon Hall Design</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">VIP Lounge Decoration</h4>
@@ -290,7 +288,7 @@
 
             <!-- Product 23 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/kypballoon7.jpg" alt="Balloon 7"></div>
+                <div class="card-img-box"><img src="images/kypballoon7.jpg" alt="Balloon 7" loading="lazy"></div>
                 <div style="padding: 20px;">
                     <span style="color: #b45309; font-size: 11px; font-weight: 700; text-transform: uppercase;">Balloon Hall Design</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Anniversary Photo Booth</h4>
@@ -307,20 +305,19 @@
         <p>&copy; 2026 Kha Yae Pin Mart. All Rights Reserved.</p>
     </footer>
 
-    <!-- ဖုန်း Menu စနစ် ဖွင့်/ပိတ် JavaScript -->
+    <!-- ဖုန်း Menu စနစ် ဖွင့်/ပိတ် JavaScript (Samsung & Android စိတ်ချရအောင် ညှိထားသည်) -->
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
         const navMenu = document.getElementById('nav-menu');
 
         mobileMenu.addEventListener('click', () => {
             navMenu.classList.toggle('show');
-            const icon = mobileMenu.querySelector('i');
+            
+            const textNode = mobileMenu.querySelector('span');
             if (navMenu.classList.contains('show')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
+                textNode.innerHTML = "&#10006;"; // ကြက်ခြေခတ်ပုံစံ (✖) ပြောင်းမည်
             } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                textNode.innerHTML = "&#9776;";  // ၃ ကြောင်းပုံစံ (☰) ပြန်ပြမည်
             }
         });
     </script>
